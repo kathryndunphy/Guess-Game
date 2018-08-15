@@ -18,10 +18,14 @@ var guess = prompt("What's your guess");
 
 function startUp()
 for (i=o; i<randomWord.length; i++){
-    if (answer == guess){
+    if (letter === guessedLetters[i]){
         alert("Correct!");
-        break;
+        wuns++;
+        document.querySelector("#wins").innerHTML= wins;
+        reset();
     }else{
-        guess = prompt("try again");
+        guess = prompt("try again, beyotch");
     }  
+    updateGuessesLeft();
+    updateGuessesSoFar();
 }
